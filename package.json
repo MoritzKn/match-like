@@ -1,7 +1,7 @@
 {
   "name": "match-like",
   "version": "0.0.1",
-  "description": "Much nicer switch alternative inspired by Rusts match",
+  "description": "Much nicer switch alternative inspired by matches from Rust lang",
   "main": "index.js",
   "scripts": {
     "test": "node tests.js"
