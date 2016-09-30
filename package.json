@@ -1,0 +1,26 @@
+{
+  "name": "match-like",
+  "version": "0.0.1",
+  "description": "Much nicer switch alternative inspired by Rusts match",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MoritzKn/match-like.git"
+  },
+  "keywords": [
+    "switch",
+    "rust",
+    "match",
+    "syntactic",
+    "sugar"
+  ],
+  "author": "Moritz Kneilmann <moritz.kneilmann@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoritzKn/match-like/issues"
+  },
+  "homepage": "https://github.com/MoritzKn/match-like#readme"
+}
