@@ -1,5 +1,16 @@
 'use strict';
 
+/**
+ * Much nicer alternative to the `switch` statement inspired by the `match`
+ * expression from Rust lang.
+ *
+ * @param  {*}     value  - Value of any type to match against.
+ * @param  {Array} checks - Array of checks. All checks will be executed in
+ *                          order until the first match. The every check is
+ *                          an array starting with n values and ending with
+ *                          a function as it's last element.
+ * @return {*}            - The value returned by the executed handler.
+ */
 module.exports = function match(value, checks) {
     if (!checks) {
         return;
