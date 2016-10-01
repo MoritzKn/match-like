@@ -153,5 +153,5 @@ match(getDayName(day), [
 ## Note on compatibility
 `mach` don't has to be written with arrow functions, normal
 function expressions work as well. If you do this, `match`
-should work in pretty mutch every JS environment down to IE8
+should work in pretty much every JS environment down to IE8
 or something.
