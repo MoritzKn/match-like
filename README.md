@@ -5,6 +5,9 @@ the `match` expression from [Rust](https://www.rust-lang.org)
 Using match will make your code more readable and allow
 you to use the immutable `const` *everywhere*.
 
+[![Build Status](https://travis-ci.org/MoritzKn/match-like.svg?branch=master)](https://travis-ci.org/MoritzKn/match-like)
+
+
 ## Install
 ```sh
 npm install match-like
