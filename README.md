@@ -18,7 +18,7 @@ npm install match-like
 const match = require('match-like');
 
 let returnValue = match(someValue, [
-    [valueToMach1, valueToMach1, (match, matchIndex, allValue) =>
+    [valueToMatch1, valueToMatch1, (match, matchIndex, allValue) =>
         someExpression],
     [() =>
         defaultExpression,
@@ -29,7 +29,7 @@ let returnValue = match(someValue, [
 ## Syntax
 ```
 match(value, [
-    [valueToMach, ..., (match, matchIndex, allValue) => { ... }],
+    [valueToMatch, ..., (match, matchIndex, allValue) => { ... }],
     ...
 ])
 ```
