@@ -2,7 +2,7 @@
 
 /**
  * Much nicer alternative to the `switch` statement inspired by the `match`
- * expression from Rust lang.
+ * expression from Rust.
  *
  * @param  {*}     value  - Value of any type to match against.
  * @param  {Array} checks - Array of checks. All checks will be executed in
