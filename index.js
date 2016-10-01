@@ -10,7 +10,7 @@ module.exports = function match(value, checks) {
     }
 
     for (let i = 0; i < checks.length; i += 1) {
-        if (!Array.isArray(checks[i])) {
+        if (typeof checks[i].pop !== 'function' || typeof checks[i].indexOf !== 'function') {
             throw new Error('Every checks has to be an array');
         }
 
