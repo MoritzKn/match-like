@@ -1,6 +1,6 @@
 {
   "name": "match-like",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Much nicer alternative to the switch statement inspired by the match expression from Rust.",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,7 @@
     "url": "https://github.com/MoritzKn/match-like/issues"
   },
   "homepage": "https://github.com/MoritzKn/match-like#readme",
-  "engines" : { "node" : ">=5.11" }
+  "engines": {
+    "node": ">=5.11"
+  }
 }
