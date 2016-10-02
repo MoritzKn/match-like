@@ -4,7 +4,7 @@
   "description": "Much nicer alternative to the switch statement inspired by the match expression from Rust.",
   "main": "index.js",
   "scripts": {
-    "test": "node tests.js"
+    "test": "node tests.js && ./node_modules/jshint/bin/jshint *.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "homepage": "https://github.com/MoritzKn/match-like#readme",
   "engines": {
     "node": ">=5.11"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.3"
   }
 }
