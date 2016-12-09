@@ -22,13 +22,13 @@ module.exports = function match(value, checks) {
 
     for (let i = 0; i < checks.length; i += 1) {
         if (typeof checks[i].pop !== 'function' || typeof checks[i].indexOf !== 'function') {
-            throw new Error('Every checks has to be an array');
+            throw new Error('Every check has to be of type array');
         }
 
         let func = checks[i].pop();
 
         if (typeof func !== 'function') {
-            throw new Error('The last element in the case array has to be a function');
+            throw new Error('The last element in the checks array has to be a function');
         }
 
         let variants = checks[i];
