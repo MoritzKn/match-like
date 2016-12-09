@@ -1,6 +1,5 @@
 # match-like
-> Much nicer alternative to the `switch` statement inspired by
-the `match` expression from [Rust](https://www.rust-lang.org)
+Util function to serve as an alternative to the `switch` statement inspired by [Rusts](https://www.rust-lang.org) [`match` expression](https://doc.rust-lang.org/book/match.html)
 
 Using match will make some of your code more readable and allow
 you to use the immutable `const` more often.

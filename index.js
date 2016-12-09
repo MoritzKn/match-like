@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * Much nicer alternative to the `switch` statement inspired by the `match`
- * expression from Rust.
+ * Util function to serve as an alternative to the `switch` statement inspired
+ * by Rusts `match` expression
  *
  * @param  {*}     value  - Value of any type to match against.
  * @param  {Array} checks - Array of checks. All checks will be executed in

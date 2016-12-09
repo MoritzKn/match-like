@@ -1,7 +1,7 @@
 {
   "name": "match-like",
   "version": "0.1.1",
-  "description": "Much nicer alternative to the switch statement inspired by the match expression from Rust.",
+  "description": "Util function to serve as an alternative to the switch statement inspired by Rusts match expression",
   "main": "index.js",
   "scripts": {
     "test": "node tests.js && ./node_modules/jshint/bin/jshint *.js"
