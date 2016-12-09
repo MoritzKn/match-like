@@ -2,15 +2,15 @@
 > Much nicer alternative to the `switch` statement inspired by
 the `match` expression from [Rust](https://www.rust-lang.org)
 
-Using match will make your code more readable and allow
-you to use the immutable `const` *everywhere*.
+Using match will make some of your code more readable and allow
+you to use the immutable `const` more often.
 
 [![Build Status](https://travis-ci.org/MoritzKn/match-like.svg?branch=master)](https://travis-ci.org/MoritzKn/match-like)
 
 
 ## Install
 ```sh
-npm install match-like
+npm install match-like --save
 ```
 
 ## Usage
@@ -18,20 +18,12 @@ npm install match-like
 const match = require('match-like');
 
 let returnValue = match(someValue, [
-    [valueToMatch1, valueToMatch1, (match, matchIndex, allValue) =>
+    [valueToMatch1, valueToMatch2, (value, i, all) =>
         someExpression],
-    [() =>
-        defaultExpression,
+    // more checks ...
+    [() => defaultExpression,
 ]);
 
-```
-
-## Syntax
-```
-match(value, [
-    [valueToMatch, ..., (match, matchIndex, allValue) => { ... }],
-    ...
-])
 ```
 
 ## Parameters
@@ -45,23 +37,23 @@ match(value, [
       with a function as it's last element.
         - **value**  
           Values of any type to check against. If any of
-          the values is equals (`===`) to the first value
+          the values is equal (`===`) to the first value
           supplied to the `match` function, the `handler`
           will be executed. If zero values are supplied
-          the `handler` will always be executed.
+          the `handler` will be executed in any why.
         - **handler**  
-          Callback function, which will be executed if any
+          Callback function that will be executed if any
           of the values matches. The callback takes three
           optional arguments:
-            - **match**
+            - **matchedValue**
               The the matched element.
             - **matchIndex**
               The index of the matched value.
-            - **allValue**
+            - **allValues**
               Array with all values i.e. the `check` without
               the `handler`.
 
-## Comparisons
+## Comparison
 
 ### With match
 
@@ -70,13 +62,13 @@ const match = require('match-like');
 
 const num = 7;
 const what = match(num, [
-    [0, 2, 4, 6, 8, () => 'a even number'],
-    [1, 3, 5, 7, 9, () => 'a odd number'],
+    [0, 2, 4, 6, 8, () => 'an even number'],
+    [1, 3, 5, 7, 9, () => 'an odd number'],
     [() => 'unknown']
 ]);
 
 console.log(`${num} is ${what}`);
-// => 7 is a odd number
+// => 7 is an odd number
 ```
 
 ### With switch
@@ -91,21 +83,21 @@ switch (num) {
     case 4:
     case 6:
     case 8:
-        what = 'a even number';
+        what = 'an even number';
         break;
     case 1:
     case 3:
     case 5:
     case 7:
     case 9:
-        what = 'a odd number';
+        what = 'an odd number';
         break;
     default:
         what = 'unknown';
 }
 
 console.log(`${num} is ${what}`);
-// => 7 is a odd number
+// => 7 is an odd number
 ```
 
 ### In Rust
@@ -113,16 +105,16 @@ console.log(`${num} is ${what}`);
 ```rust
 let num = 7;
 let what = match num {
-    0 | 2 | 4 | 6 | 8 => "a even number",
-    1 | 3 | 5 | 7 | 9 => "a odd number",
+    0 | 2 | 4 | 6 | 8 => "an even number",
+    1 | 3 | 5 | 7 | 9 => "an odd number",
     _ => "unknown"
 };
 
 println!("{} is {}", num, what);
-// => 7 is a odd number
+// => 7 is an odd number
 ```
 
-### Example
+## Example
 
 ```js
 const match = require('match-like');
@@ -146,10 +138,9 @@ function getDayName(dayNum) {
     ]);
 }
 
-match(getDayName(day), [
-    [...workingDays, dayName =>
-        console.log(`You should go to work, it's ${dayName}`)],
-    [...weekendDays, dayName =>
-        console.log(`It's ${dayName} and this means it's weekend`)],
+const message = match(getDayName(day), [
+    [...workingDays, () => 'It\'s a working day'],
+    [...weekendDays, () => 'It\'s weekend'],
 ]);
+console.log(message);
 ```
