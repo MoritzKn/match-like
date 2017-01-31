@@ -1,8 +1,8 @@
 # match-like
-Util function to serve as an alternative to the `switch` statement inspired by [Rusts](https://www.rust-lang.org) [`match` expression](https://doc.rust-lang.org/book/match.html)
+match-like provides an util function to serve as an alternative to the `switch` statement and is inspired 
+by [Rusts](https://www.rust-lang.org) [`match` expression](https://doc.rust-lang.org/book/match.html)
 
-Using match will make some of your code more readable and allow
-you to use the immutable `const` more often.
+Using `match` will make some of your code more readable and allow you to use the immutable `const` more often.
 
 [![Build Status](https://travis-ci.org/MoritzKn/match-like.svg?branch=master)](https://travis-ci.org/MoritzKn/match-like)
 
@@ -54,7 +54,7 @@ let returnValue = match(someValue, [
 
 ## Comparison
 
-### With match
+### Using match
 
 ```js
 const match = require('match-like');
@@ -70,7 +70,7 @@ console.log(`${num} is ${what}`);
 // => 7 is an odd number
 ```
 
-### With switch
+### Using switch
 
 ```js
 const num = 7;
