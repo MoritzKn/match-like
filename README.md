@@ -2,7 +2,7 @@
 match-like provides an util function to serve as an alternative to the `switch` statement and is inspired 
 by [Rusts](https://www.rust-lang.org) [`match` expression](https://doc.rust-lang.org/book/match.html)
 
-Using `match` will make some of your code more readable and allow you to use the immutable `const` more often.
+Using `match` will make some of your code more readable and allow you to use the immutable `const` more frequently.
 
 [![Build Status](https://travis-ci.org/MoritzKn/match-like.svg?branch=master)](https://travis-ci.org/MoritzKn/match-like)
 
@@ -33,7 +33,7 @@ let returnValue = match(someValue, [
   until the first match.
     - **check**  
       Array starting with n values and ending
-      with a function as it's last element.
+      with a function as its last element.
         - **value**  
           Values of any type to check against. If any of
           the values is equal (`===`) to the first value
