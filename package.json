@@ -1,6 +1,6 @@
 {
   "name": "match-like",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Util function to serve as an alternative to the switch statement inspired by Rusts match expression",
   "main": "index.js",
   "scripts": {
